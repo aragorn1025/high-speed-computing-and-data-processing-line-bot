@@ -13,7 +13,8 @@ __instructions = {
         'suggest': ['建議', 'Suggest']
 }
 
-__show_all_instructions = '所有指令：\n\t幫助\n\t推薦\n\t試聽\n\t最佳歌手\n\t讚\n\t回報\n\t建議\n\n查看指令規則，請輸入：\n\t幫助 [指令]\n\t例如：幫助 推薦'
+# __show_all_instructions = '所有指令：\n\t幫助\n\t推薦\n\t試聽\n\t最佳歌手\n\t讚\n\t回報\n\t建議\n\n查看指令規則，請輸入：\n\t幫助 [指令]\n\t例如：幫助 推薦'
+__show_all_instructions = '所有指令：\n\t幫助\n\t推薦\n\t試聽\n\n查看指令規則，請輸入：\n\t幫助 [指令]\n\t例如：幫助 推薦'
 __show_error_prefix = '指令格式錯誤！\n\n'
 __show_help = {
         'help': '列出所有指令，請輸入：\n\t幫助\n\n查看指令規則，請輸入：\n\t幫助 [指令]\n\t例如：幫助 推薦',
