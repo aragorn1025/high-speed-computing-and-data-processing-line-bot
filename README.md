@@ -1,5 +1,5 @@
 <h1>Western Music Recommender Line Bot</h1>
-<h3>for the final project of the class, High Speed Computing and Data Processing</h3>
+for the final project of the class, High Speed Computing and Data Processing
 
 * * *
 
@@ -9,19 +9,20 @@
 * [Data Source](#data_source)
 * [Framework](#framework)
   * [Undone](#framework_undone)
+* [QRCode](#qr_code)
 * [Appreciation](#appreciation)
 
 * * *
 
 <h2 id="purpose">Purpose</h2>
 
-Provide user a convenience line bot to access the top rank music.
+Provides user a convenience line bot to access the top rank music.
 
 * * *
 
 <h2 id="data_source">Data Source</h2>
 
-The famous music ranking website: [Billboard Hot 100][billboard_hot_100]
+The famous music ranking website: [Billboard Hot 100][billboard_hot_100].
 
   [billboard_hot_100]: https://www.billboard.com/charts/hot-100
 
@@ -31,16 +32,24 @@ The famous music ranking website: [Billboard Hot 100][billboard_hot_100]
 
 * Help: shows all instructions
 * Help [Instruction]: shows the description of the specified instruction
-* TopSong: shows the top 10 song of the rank this week
-* Listen TopSong [Rank Order]: gives the link of the YouTube search
+* TopSong: shows the top 10 songs of the rank this week
+* Listen TopSong [Rank Order]: gives the link of the YouTube search by the rank order of the top songs
 
 <h3 id="framework_undone">Undone</h3>
 The instructions below are still in the process.
 
-* BestCreator: shows the top 10 popular creator of the rank this week
+* BestCreator: shows the top 10 popular creators of the rank this week
 * Like: records the user personal likes to give the more suitable rank list
-* Report: reports of the bugs to us
-* Suggest: give the suggest of the issues to us
+* Report: reports the bugs to us
+* Suggest: gives the suggest of the issues to us
+
+* * *
+
+<h2 id="qr_code">QRCode</h2>
+
+<div align="center">
+  <img src=".github/QRCode.png", width="180">
+</div>
 
 * * *
 
