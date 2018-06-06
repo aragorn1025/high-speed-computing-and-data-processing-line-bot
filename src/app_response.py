@@ -9,7 +9,7 @@ def output(inputs):
                 head = 'json: ' + append_json(inputs = inputs) + '\n'
                 return head + instruction.get_instruction_response(inputs)
         except Exception as e:
-                return head + 'Error:\n' + str(e)
+                return 'Error:\n' + str(e)
 
 def append_json(file_name = './data/record.json', inputs = ''):
         with open(file_name, mode = 'r', encoding='utf-8') as file_in:
@@ -18,4 +18,4 @@ def append_json(file_name = './data/record.json', inputs = ''):
         with open(file_name, mode = 'w', encoding='utf-8') as file_out:
                 json.dump(data, file_out)
         with open(file_name, mode = 'r', encoding='utf-8') as file_in:
-                return json.load(file_in)
+                return str(json.load(file_in))
