@@ -13,7 +13,7 @@ def output(source, inputs):
 def append_json(source, inputs, file_name = './data/record.json'):
         with open(file_name, mode = 'r', encoding='utf-8') as file_in:
                 data = json.load(file_in)
-        data.append({'user': str(source), 'text': inputs})
+        data.append({'user': str(source['userId']), 'text': inputs})
         with open(file_name, mode = 'w', encoding='utf-8') as file_out:
                 json.dump(data, file_out)
         with open(file_name, mode = 'r', encoding='utf-8') as file_in:
