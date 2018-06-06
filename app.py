@@ -32,22 +32,25 @@ def callback():
 
 @handler.add(MessageEvent, message = TextMessage)
 def handle_message(event):
-        line_bot_api.reply_message(
-	        event.reply_token,
-                TextSendMessage(text = app_response.output(event.message.text))
-        )
-        line_bot_api.reply_message(
-	        event.reply_token,
-                TextSendMessage(text = str(event.source))
-        )
-        line_bot_api.reply_message(
-	        event.reply_token,
-                TextSendMessage(text = str(event.source.user))
-        )
-        line_bot_api.reply_message(
-	        event.reply_token,
-                TextSendMessage(text = str(event.source.userId))
-        )
+        try:
+                line_bot_api.reply_message(
+	                event.reply_token,
+                        TextSendMessage(text = app_response.output(event.message.text))
+                )
+                line_bot_api.reply_message(
+	                event.reply_token,
+                        TextSendMessage(text = str(event.source))
+                )
+                line_bot_api.reply_message(
+	                event.reply_token,
+                        TextSendMessage(text = str(event.source.user))
+                )
+                line_bot_api.reply_message(
+	                event.reply_token,
+                        TextSendMessage(text = str(event.source.userId))
+                )
+        except Exception as e:
+                return 'Error:\n' + str(e)
 
 if __name__ == '__main__':
         app.run()
