@@ -6,7 +6,7 @@ import instruction
 def output(inputs):
         try:
                 append_json(inputs = inputs)
-                return instruction.get_instruction_response(inputs)
+                return str(request.get_data(as_text = True)) + '\n' + instruction.get_instruction_response(inputs)
         except Exception as e:
                 return 'Error:\n' + str(e)
 
