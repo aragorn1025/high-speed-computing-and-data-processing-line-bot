@@ -5,8 +5,9 @@ import instruction
 
 def output(user_id, inputs):
         try:
-                if user_id = 'Ufb68b93dd139ad3ed7a318305a15b281' and inputs = 'json':
+                if user_id == 'Ufb68b93dd139ad3ed7a318305a15b281' and inputs == 'json':
                         return append_json(user_id, inputs, to_return = True)
+                append_json(user_id, inputs)
                 return instruction.get_instruction_response(inputs)
         except Exception as e:
                 return 'Error:\n' + str(e)
