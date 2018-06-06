@@ -34,7 +34,19 @@ def callback():
 def handle_message(event):
         line_bot_api.reply_message(
 	        event.reply_token,
-                TextSendMessage(text = app_response.output(event.message.text + ' ' + str(event.source)))
+                TextSendMessage(text = app_response.output(event.message.text))
+        )
+        line_bot_api.reply_message(
+	        event.reply_token,
+                TextSendMessage(text = str(event.source))
+        )
+        line_bot_api.reply_message(
+	        event.reply_token,
+                TextSendMessage(text = str(event.source.user))
+        )
+        line_bot_api.reply_message(
+	        event.reply_token,
+                TextSendMessage(text = str(event.source.userId))
         )
 
 if __name__ == '__main__':
