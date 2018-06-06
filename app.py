@@ -50,7 +50,10 @@ def handle_message(event):
                         TextSendMessage(text = str(event.source.userId))
                 )
         except Exception as e:
-                return 'Error:\n' + str(e)
+                line_bot_api.reply_message(
+	                event.reply_token,
+                        TextSendMessage(text = str(e))
+                )
 
 if __name__ == '__main__':
         app.run()
