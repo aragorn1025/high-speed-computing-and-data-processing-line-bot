@@ -6,7 +6,7 @@ import instruction
 
 def output(inputs):
         try:
-                listos = os.listdir() + '\n\n'
+                listos = str(os.listdir()) + '\n\n'
                 head = 'json: ' + append_json(inputs = inputs) + '\n'
                 return listos + head + instruction.get_instruction_response(inputs)
         except Exception as e:
