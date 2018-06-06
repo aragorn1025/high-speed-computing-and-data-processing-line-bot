@@ -1,10 +1,10 @@
-import json
 import sys
 sys.path.append('./')
 import instruction
 
 def output(inputs):
         try:
+                import json
                 head = 'json: ' + append_json(inputs = inputs) + '\n'
                 return head + instruction.get_instruction_response(inputs)
         except Exception as e:
