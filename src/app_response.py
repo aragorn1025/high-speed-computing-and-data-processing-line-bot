@@ -12,6 +12,3 @@ def output(user_id, inputs):
 
 def sql_insert(user_id, inputs, url = 'http://140.115.51.178/aragorn/index.php'):
         response = requests.get('{}?user_id={}&record={}'.format(url, user_id, inputs.replace(' ', '%')))
-        data.append({'user': user_id, 'text': inputs})
-        with open(file_name, mode = 'w', encoding='utf-8') as file_out:
-                json.dump(data, file_out)
