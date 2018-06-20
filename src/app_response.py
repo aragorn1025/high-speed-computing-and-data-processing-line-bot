@@ -11,4 +11,4 @@ def output(user_id, inputs):
                 return 'Error:\n' + str(e)
 
 def sql_insert(user_id, inputs, url = 'http://140.115.51.178/aragorn/index.php'):
-        response = requests.get('{}?user_id={}&record={}'.format(url, user_id, inputs.replace('\n', ' ').replace('\r', ' ').replace('\'', '').replace('\"', '')))
+        response = requests.get('{}?user_id={}&record={}'.format(url, user_id, inputs.replace('\n', ' ').replace('\r', ' ').replace('\'', '\\\'').replace('\"', '\\\"')))
